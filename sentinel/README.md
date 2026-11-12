@@ -80,6 +80,17 @@ java -cp oop/out Main 80 < ../phase1-bash/samples/muestra-rota.txt
 # rechaza cada línea inválida con motivo y termina con resumen correcto
 ```
 
+## Fase 3 — Java: herencia y polimorfismo (clases 8 y 9)
+
+Sentinel como proyecto real: un paquete por responsabilidad, una familia de reglas con herencia, y tres interfaces (`Collector`, `Rule`, `Renderer`) que permiten agregar fuentes, reglas y formatos sin tocar el motor. Detalle completo, con el diagrama de clases y lo bueno y lo malo del diseño, en [phase3-java/README.md](phase3-java/README.md).
+
+```bash
+cd sentinel/phase3-java
+./build.sh                                                   # compila y corre el autochequeo: 46/46
+java -cp out sentinel.app.Main --replay=../phase1-bash/samples/muestra-2026-09-17.txt --cpu=60
+java -cp out sentinel.app.Main --run=../phase1-bash/collector.sh --lines=5   # Java lanza el colector
+```
+
 ## Guías
 
 - [Clase 4 — Bash: el colector](../Apuntes/Clase04-Guia.md)
@@ -88,3 +99,4 @@ java -cp oop/out Main 80 < ../phase1-bash/samples/muestra-rota.txt
 - [Clase 7 — Colecciones y composición](../Apuntes/Clase07-Guia.md)
 - [Clase 8 — Herencia](../Apuntes/Clase08-Guia.md)
 - [Clase 9 — Interfaces y polimorfismo](../Apuntes/Clase09-Guia.md)
+- [Clase 10 — Principios de diseño](../Apuntes/Clase10-Guia.md): cada principio, con dónde lo aplica la Fase 3
